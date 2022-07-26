@@ -5,6 +5,11 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * 
+ * @author SRISHTI BAJAJ
+ *
+ */
 @Entity
 @Table(name = "Account_table")
 public class Accounts {

@@ -10,7 +10,11 @@ import pb1b.payments.account.dao.AccountDao;
 import pb1b.payments.account.dto.Accounts;
 import pb1b.payments.users.dto.ResponseStructure;
 
-
+/**
+ * 
+ * @author SRISHTI BAJAJ
+ *
+ */
 @Service
 public class AccountService {
 
