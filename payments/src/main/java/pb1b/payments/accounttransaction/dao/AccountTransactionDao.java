@@ -6,6 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import pb1b.payments.accounttransaction.repository.AccountTransactionRepository;
+
 
 @Repository
 public class AccountTransactionDao {
