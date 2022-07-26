@@ -18,11 +18,7 @@ import pb1b.payments.accounttransaction.dto.AccountTransaction;
 import pb1b.payments.accounttransaction.service.AccountTransactionService;
 import pb1b.payments.users.dto.ResponseStructure;
 
-/**
- * 
- * @author SRISHTI BAJAJ
- *
- */
+
 @RestController
 @RequestMapping("/api/")
 public class AccountTransactionController {
