@@ -10,6 +10,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
+import pb1b.payments.registeredbillers.dto.RegisteredBillers;
+
 
 @Entity
 @Table(name = "Bills_table")
