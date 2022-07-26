@@ -1,4 +1,4 @@
-package com.capstone.paymentsystem.accounttransaction.controller;
+package pb1b.payments.accounttransaction.controller;
 
 import java.util.List;
 
@@ -13,9 +13,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.capstone.paymentsystem.accounttransaction.dto.AccountTransaction;
-import com.capstone.paymentsystem.accounttransaction.service.AccountTransactionService;
-import com.capstone.paymentsystem.user.dto.ResponseStructure;
+import pb1b.payments.accounttransaction.dto.AccountTransaction;
+import pb1b.payments.accounttransaction.service.AccountTransactionService;
+import pb1b.payments.users.dto.ResponseStructure;
+
 
 @RestController
 @RequestMapping("/api/")

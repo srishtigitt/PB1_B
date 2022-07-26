@@ -1,4 +1,4 @@
-package com.capstone.paymentsystem.accounttransaction.service;
+package pb1b.payments.accounttransaction.service;
 
 import java.util.List;
 
@@ -6,9 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
-import com.capstone.paymentsystem.accounttransaction.dao.AccountTransactionDao;
-import com.capstone.paymentsystem.accounttransaction.dto.AccountTransaction;
-import com.capstone.paymentsystem.user.dto.ResponseStructure;
+import pb1b.payments.accounttransaction.dao.AccountTransactionDao;
+import pb1b.payments.accounttransaction.dto.AccountTransaction;
+import pb1b.payments.users.dto.ResponseStructure;
+
+
 @Service
 public class AccountTransactionService {
 	@Autowired
