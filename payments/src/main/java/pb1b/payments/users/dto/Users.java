@@ -10,6 +10,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import pb1b.payments.account.dto.Accounts;
+import pb1b.payments.role.dto.Role;
 
 
 @Entity
