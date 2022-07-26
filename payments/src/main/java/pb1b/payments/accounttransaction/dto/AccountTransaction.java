@@ -3,6 +3,7 @@ package pb1b.payments.accounttransaction.dto;
 import javax.persistence.*;
 
 import pb1b.payments.account.dto.Accounts;
+import pb1b.payments.bills.dto.Bills;
 
 
 @Entity
