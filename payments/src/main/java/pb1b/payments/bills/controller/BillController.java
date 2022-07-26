@@ -16,7 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 import pb1b.payments.bills.dto.Bills;
 import pb1b.payments.bills.service.BillService;
 import pb1b.payments.users.dto.ResponseStructure;
-
+/**
+ * 
+ * @author LOKENATH BASU
+ *
+ */
 @RestController
 @RequestMapping("/api/")
 public class BillController {
