@@ -21,37 +21,61 @@ import pb1b.payments.users.dto.ResponseStructure;
 @RestController
 @RequestMapping("/api/")
 
-/*
- * 
+/**
+ * RegisterBillerController (Used to register, update, retreive and delete billers in the Registered_Billers table)
  * @author ARYAN
  *
- */
+ */ 
+
 
 public class RegisterBillerController {
-
+	/**
+	 * RegisterBillerController
+	 */
 	@Autowired
 	private RegisterBillerService registeredbillerservice;
-
+	
+	/**
+	 * createRegisterBiller (this is responsible to create Register Biller)
+	 * @param rb
+	 * @return
+	 */
 	@PostMapping("RegisteredBiller")
 	public ResponseStructure<RegisteredBillers> createRegisterBiller(@RequestBody RegisteredBillers rb) {
 		return registeredbillerservice.createRegisteredBiller(rb);
 	}
-
+	/**
+	 * updateStudent (this is responsible to update Registered Biller)
+	 * @param RB
+	 * @return
+	 */
 	@PutMapping("RegisteredBiller")
 	public ResponseStructure<RegisteredBillers> updateStudent(@RequestBody RegisteredBillers RB) {
 		return registeredbillerservice.updateRegisteredBiller(RB);
 	}
-
+	/**
+	 * getRegisteredBillerById (this is responsible to retreive the Registered Biller by Id)
+	 * @param id
+	 * @return
+	 */
 	@GetMapping("RegisteredBiller")
 	public ResponseStructure<RegisteredBillers> getRegisteredBillerById(@RequestParam String id) {
 		return registeredbillerservice.getRegisteredBillerById(id);
 	}
-
+	/**
+	 * getALl (this is responsible to retrieve all Registered Billers)
+	 * @param all
+	 * @return
+	 */
 	@GetMapping("RegisteredBiller/all")
 	public ResponseStructure<List<RegisteredBillers>> getALl() {
 		return registeredbillerservice.getAll();
 	}
-
+	/**
+	 * deleteRegisteredBiller (this is responsible to delete the Registered Biller)
+	 * @param id
+	 * @return
+	 */
 	@DeleteMapping("RegisteredBiller/{id}")
 	public ResponseStructure<RegisteredBillers> deleteRegisteredBiller(@PathVariable String id) {
 		return registeredbillerservice.deleteRegisteredBillerById(id);
