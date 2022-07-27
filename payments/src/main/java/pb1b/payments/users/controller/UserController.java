@@ -19,46 +19,44 @@ import pb1b.payments.users.service.UserService;
 
 /**
 *
-* User Controller (In this UserController class is used to add users,Retreive the users, Delete the users, Update the users )
+* User Controller (UserController class is used to add users,Retreive the users, Delete the users, Update the users )
 *
 * @author Venuu Maadhav V R
 *
 */
+
 
 @RestController
 @RequestMapping("/api/")
 public class UserController {
 
 	/**
-	*
-	*
-	* userService is used to add the users, update the users, retrieve the users, delete the users
-	*
-	*
-	*/
+	 * UserController
+	 */
 	@Autowired
 	private UserService userService;
+	
 	/**
-	*
-	* @param users
-	* @return added user
-	*/
+	 * saveUser (this is responsible to create users )
+	 * @param users
+	 * @return
+	 */
 	@PostMapping("user")
 	public ResponseStructure<Users> saveUser(@RequestBody  Users users) {
 		return userService.createUser(users);
 	}
 	
 	/**
-	*
+	* updateUser (this is responsible to update the users )
 	* @param student
-	* @return updated student
+	* @return 
 	*/
 	@PutMapping("user")
 	public ResponseStructure<Users> updateUser(@RequestBody Users student) {
 		return userService.updateUser(student);
 	}
 	/**
-	*
+	* getUserById (this is responsible to retrieve the users by their id )
 	* @param id
 	* @return user 
 	*/
@@ -67,9 +65,10 @@ public class UserController {
 		return userService.getUserById(id);
 	}
 	/**
+	* getALl (this is responsible to retrieve all the users )
 	*
-	* @param id
-	* @return all users
+	* @param all
+	* @return 
 	*/
 	@GetMapping("user/all")
 	public ResponseStructure<List<Users>> getALl() {
@@ -77,9 +76,9 @@ public class UserController {
 	}
 	
 	/**
-	*
+	* deleteUser (this is responsible to delete the users by their id )
 	* @param id
-	* @return  deleted student
+	* @return 
 	* 
 	*/
 	@DeleteMapping("user/{id}")
