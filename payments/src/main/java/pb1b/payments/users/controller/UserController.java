@@ -17,15 +17,31 @@ import pb1b.payments.users.dto.ResponseStructure;
 import pb1b.payments.users.dto.Users;
 import pb1b.payments.users.service.UserService;
 
+/**
+*
+* User Controller (In this User class we can add users,Get the users, Delete the users )
+* @author Venuu Maadhav V R
+*
+*/
 
 @RestController
 @RequestMapping("/api/")
 public class UserController {
 
-	
+	/**
+	*
+	*
+	* userService is used to add the users, update the users, retrieve the users, delete the users
+	*
+	*
+	*/
 	@Autowired
 	private UserService userService;
-	
+	/**
+	*
+	* @param id
+	* @return
+	*/
 	@PostMapping("user")
 	public ResponseStructure<Users> saveUser(@RequestBody  Users users) {
 		return userService.createUser(users);
