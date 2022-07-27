@@ -17,15 +17,25 @@ import pb1b.payments.role.dto.Role;
 import pb1b.payments.role.service.RoleService;
 import pb1b.payments.users.dto.ResponseStructure;
 
-
+/**
+ * RoleController (Used to add Role in the Role table)
+ * @author Sarthak
+ *
+ */
 
 @RestController
 @RequestMapping("/api/")
 public class RoleController {
-
+	 /**
+	 * RoleController
+	 */
 	@Autowired
 	private RoleService roleservice;
-
+	/**
+	 * CreateRole (this is responsible to create role)
+	 * @param role
+	 * @return
+	 */
 	@PostMapping("Role")
 	public ResponseStructure<Role> CreateRole(@RequestBody Role role) {
 		return roleservice.createRole(role);
