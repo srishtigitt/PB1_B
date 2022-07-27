@@ -17,38 +17,67 @@ import pb1b.payments.masterbiller.dto.MasterBiller;
 import pb1b.payments.masterbiller.service.MasterBillerService;
 import pb1b.payments.users.dto.ResponseStructure;
 
-
+/**
+ * MasterBillerController ()
+ * @author Pratiksha
+ *
+ */
 @RestController
 @RequestMapping("/api/")
 public class MasterBillerController {
-
+	/**
+	 * masterbillerservice
+	 */
 	@Autowired
 	private MasterBillerService masterbillerservice;
 
+	/**
+	 * CreateMasterBiller (this is responsible to create master bill)
+	 * @param biller_Detail
+	 * @return
+	 */
 	@PostMapping("MasterBiller")
-	public ResponseStructure<MasterBiller> CreateMasterBiller(@RequestBody MasterBiller mb) {
-		return masterbillerservice.createMasterBiller(mb);
+	public ResponseStructure<MasterBiller> CreateMasterBiller(@RequestBody MasterBiller biller_Detail) {
+		return masterbillerservice.createMasterBiller(biller_Detail);
 	}
 		
+	/**
+	 * updateMasterBiller (this is responsible to update master bill )
+	 * @param Biller
+	 * @return
+	 */
 	@PutMapping("MasterBiller")
-	public ResponseStructure<MasterBiller> updateMasterBiller(@RequestBody MasterBiller student) {
-		return masterbillerservice.updateMasterBiller(student);
+	public ResponseStructure<MasterBiller> updateMasterBiller(@RequestBody MasterBiller Biller) {
+		return masterbillerservice.updateMasterBiller(Biller);
 	}
 	
+	/**
+	 * getMasterBillerById (this is responsible to retrieve master bill )
+	 * @param id
+	 * @return
+	 */
 	@GetMapping("MasterBiller")
-	public  ResponseStructure<MasterBiller> getMasterBillerById(@RequestParam String id) {
-		return masterbillerservice.getMasterBillerById(id);
+	public  ResponseStructure<MasterBiller> getMasterBillerById(@RequestParam String BillerCode) {
+		return masterbillerservice.getMasterBillerById(BillerCode);
 	}
 	
+	/**
+	 * getALl (this is responsible to retrieve all master bills )
+	 * @return
+	 */
 	@GetMapping("MasterBiller/all")
 	public ResponseStructure<List<MasterBiller>> getALl() {
 		return masterbillerservice.getAllMasterBiller();
 	}
 	
-	
+	/**
+	 * deleteMasterBiller (this is responsible to delete master bill )
+	 * @param id
+	 * @return
+	 */
 	@DeleteMapping("MasterBiller/{id}")
-	public ResponseStructure<MasterBiller> deleteMasterBiller(@PathVariable  String id) {
-		return masterbillerservice.deleteMasterBillerById(id);
+	public ResponseStructure<MasterBiller> deleteMasterBiller(@PathVariable  String BillerCode) {
+		return masterbillerservice.deleteMasterBillerById(BillerCode);
 	}
 	
 	
