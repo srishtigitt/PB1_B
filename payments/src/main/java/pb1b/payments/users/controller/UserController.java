@@ -19,7 +19,8 @@ import pb1b.payments.users.service.UserService;
 
 /**
 *
-* User Controller (In this User class we can add users,Get the users, Delete the users )
+* User Controller (In this UserController class is used to add users,Retreive the users, Delete the users, Update the users )
+*
 * @author Venuu Maadhav V R
 *
 */
@@ -39,30 +40,48 @@ public class UserController {
 	private UserService userService;
 	/**
 	*
-	* @param id
-	* @return
+	* @param users
+	* @return added user
 	*/
 	@PostMapping("user")
 	public ResponseStructure<Users> saveUser(@RequestBody  Users users) {
 		return userService.createUser(users);
 	}
 	
+	/**
+	*
+	* @param student
+	* @return updated student
+	*/
 	@PutMapping("user")
 	public ResponseStructure<Users> updateUser(@RequestBody Users student) {
 		return userService.updateUser(student);
 	}
-	
+	/**
+	*
+	* @param id
+	* @return user 
+	*/
 	@GetMapping("user")
 	public  ResponseStructure<Users> getUserById(@RequestParam String id) {
 		return userService.getUserById(id);
 	}
-	
+	/**
+	*
+	* @param id
+	* @return all users
+	*/
 	@GetMapping("user/all")
 	public ResponseStructure<List<Users>> getALl() {
 		return userService.getAllUser();
 	}
 	
-	
+	/**
+	*
+	* @param id
+	* @return  deleted student
+	* 
+	*/
 	@DeleteMapping("user/{id}")
 	public ResponseStructure<Users> deleteUser(@PathVariable  String id) {
 		return userService.deleteUserById(id);
